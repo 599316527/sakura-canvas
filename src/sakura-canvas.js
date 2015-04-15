@@ -128,6 +128,19 @@ define(function(require) {
         })(this), this.config.framespan);
     };
 
+    SakuraCanvas.prototype.setConfig = function (config) {
+        var isCanvasSizeChanged = (config.canvasWidth !== undefined && config.canvasWidth !== this.config.canvasWidth)
+            || (config.canvasHeight !== undefined && config.canvasHeight !== this.config.canvasHeight);
+        SakuraCanvas.superClass.setConfig.call(this, config);
+        if (isCanvasSizeChanged) {
+            this.canvas.width = this.config.canvasWidth;
+            this.canvas.height = this.config.canvasHeight;
+        }
+        this.chips.forEach(function (chip) {
+            chip.setConfig(config);
+        });
+    };
+
     return SakuraCanvas;
 
 });

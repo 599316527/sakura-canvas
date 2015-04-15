@@ -5,7 +5,7 @@ Sakura Canvas
 
 ## Usage
 
-```
+```JavaScript
 var sakura = new SakuraCanvas({OPTIONS_HERE});
 sakura.init();                                  // make <canvas> & petals
 container.appendChild(sakura.getCanvas());      // insert canvas into document
@@ -14,7 +14,7 @@ sakura.animate();                               // start animation
 
 ## Options
 
-```
+```JavaScript
 {
     canvasClassName: 'ec-sakura-canvas',    // canvas classname
     canvasWidth: 800,                       // canvas width

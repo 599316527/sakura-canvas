@@ -10,6 +10,10 @@ define(function(require) {
     Base.prototype._defaultConfig = {};
     Base.prototype._calcInitValues = function() {};
 
+    Base.prototype.setConfig = function (config) {
+        util.shallowExtend(this.config, config, true);
+    };
+
     return Base;
 
 });
