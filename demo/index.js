@@ -1,7 +1,7 @@
 
+var devHostRegExp = /^((\d{2,3}\.){3}\d{2,3}|localhost)$/i;
 require.config({
-    baseUrl: '../src'
-    // baseUrl: '../dest'
+    baseUrl: devHostRegExp.test(location.host) ? '../src' : '../dest'
 });
 
 
