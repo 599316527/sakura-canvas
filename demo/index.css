@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "苏新诗柳楷简";
+  src: url(sxslkj.ttf);
+}
+
+body {
+    padding: 3em 0;
+    font-size: 16px;
+}
+.container {
+    position: relative;
+}
+.canvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.text {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-size: 32px;
+    font-family: "苏新诗柳楷简", "STKaiti", "KaiTi", cursive;
+    color: #7B5252;
+}
